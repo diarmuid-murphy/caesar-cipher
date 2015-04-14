@@ -4,10 +4,12 @@ text = gets.chomp
 puts("What is your key?")
 key = gets.chomp
 
-
 text = text.split("")
 
-# remove this
-# text.each do |word|
+char_and_ord = Hash.new(0)
 
-puts text.inspect
+text.each do |char|
+	char_and_ord[char] = char.ord
+end
+
+puts char_and_ord.inspect
