@@ -10,22 +10,10 @@ puts ""
 
 text = text.split("")
 
-char_and_ord = Hash.new(0)
-
-text.each do |char|
-	char_and_ord[char] = char.ord
+text.each do |i|
+	print i
+	i = i.ord
 end
 
-result = ""
-
-# check if uppercase
-char_and_ord.each do |hash_key, value|
-	print value
-end
-
-puts char_and_ord.inspect
+puts "\n"
 puts text.inspect
-
-# this will be a concatonated string from the altered hash chars
-# does not exist yet
-puts result
