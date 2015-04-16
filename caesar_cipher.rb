@@ -15,19 +15,22 @@ text = text.split("")
 text.each do |i|
 	i = i.ord
 	
-	if (i >= 65) && (i <= 90)				# check if upppercase
+	# check if upppercase
+	if (i >= 65) && (i <= 90)
 		i = i + key
 		if i > 90
 			i = i - 26
 		end
 		print i.chr
-	elsif (i >= 97) && (i <= 122)			# check if lowercase
+	# check if lowercase
+	elsif (i >= 97) && (i <= 122)
 		i = i + key
 		if i > 122
 			i = i - 26
 		end
 		print i.chr
-	else									# deals with non-alpha characters, !. &* etc ect.
+	# deals with non-alpha characters, !. &* etc ect.
+	else
 		print i.chr
 	end
 end
